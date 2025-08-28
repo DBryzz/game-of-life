@@ -100,7 +100,7 @@ public class GameOfLife {
 
         // Check for stalemate: if the new grid is the same as the current grid
         if (areGridsEqual(grid, newGrid)) {
-            System.out.println("=== Oops!! Stalemate reached! Exiting... ===");
+            System.out.println("= Oops!! Stalemate reached! = \n= Exiting... =");
             System.exit(0); // Exit the program
         }
 
@@ -114,6 +114,9 @@ public class GameOfLife {
         String command;
 
         // Display initial grid
+        System.out.println("===================================");
+        System.out.println("= \uD83D\uDC83\uD83D\uDD7A\uD83D\uDC83\uD83D\uDD7A Game Of Life \uD83D\uDC83\uD83D\uDD7A\uD83D\uDC83\uD83D\uDD7A =");
+        System.out.println("===================================");
         System.out.println("Initial Grid:");
         game.displayGrid();
 
@@ -126,6 +129,7 @@ public class GameOfLife {
             }
         } while (!command.equalsIgnoreCase("exit"));
 
+        System.out.println("= Exiting... =");
         scanner.close();
     }
 }
